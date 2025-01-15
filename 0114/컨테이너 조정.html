@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>컨테이너 그리드</title>
+    <style>
+        body {width: 100vw; height: 100vh; margin: 0; display: grid; 
+        grid-template-columns: 3fr 1fr; grid-template-rows: 100px auto 50px;
+        grid-template-areas: 'header header' 'main side' 'footer footer';}
+        /* width: 100vwl;:컨테이너의 너비를 뷰포트 너비의 100%로 설정합니다.
+            heidht :100vh;: 컨테이너의 높이를 뷰포트 높이의 100%로 설정합니다. 
+            margin:0;: 기본 여백을 제거합니다. 
+            display:grid;: 디스플레이 유형을 그리드로 설정합니다. 
+            grid-template-colums :3fr 1fr;: 두개의 열을 생성하며, 첫 번째 열은 두번째 열의 3배 너비입니다. 
+            grid-template-rows :100px auto 50px ;: 3개의 행을 생성하며, 각각의 높이는 100px, auto , 50px 입니다.
+            grid-template-areas :'header header' 'main side' 'footer footer';:그리드 항목의 영역을 정의합니다.*/
+            .header {grid-area: header; background-color: #4CAF50;}
+            .main {grid-area: main; background-color: #2196F3;}
+            .side {grid-area: side; background-color: #f44336;}
+            .footer {grid-area: footer; background-color: #ffeb3b;}
+    </style>
+</head>
+<body>
+<div class="header">헤더</div>
+<div class="main">메인 콘텐츠</div>
+<div class="side">사이드바</div>
+<div class="footer">푸터</div>
+</body>
+</html>
